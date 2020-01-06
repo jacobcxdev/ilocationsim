@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		16279B2123C1535400E27297 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16279B2023C1535400E27297 /* main.m */; };
+		1655C74C23C15FAD00886812 /* LocationSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1655C74B23C15FAD00886812 /* LocationSimulator.m */; };
+		1655C75723C17D1F00886812 /* libimobiledevice.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1655C75623C17D1F00886812 /* libimobiledevice.6.dylib */; };
+		1655C75D23C275AE00886812 /* Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1655C75C23C275AE00886812 /* Extensions.m */; };
+		1655C75E23C291C600886812 /* libimobiledevice.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1655C75623C17D1F00886812 /* libimobiledevice.6.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,11 @@
 /* Begin PBXFileReference section */
 		16279B1D23C1535400E27297 /* ilocationsim */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ilocationsim; sourceTree = BUILT_PRODUCTS_DIR; };
 		16279B2023C1535400E27297 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1655C74A23C15F9C00886812 /* LocationSimulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationSimulator.h; sourceTree = "<group>"; };
+		1655C74B23C15FAD00886812 /* LocationSimulator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationSimulator.m; sourceTree = "<group>"; };
+		1655C75623C17D1F00886812 /* libimobiledevice.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libimobiledevice.6.dylib; path = ../../../../usr/local/lib/libimobiledevice.6.dylib; sourceTree = "<group>"; };
+		1655C75B23C275A200886812 /* Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Extensions.h; sourceTree = "<group>"; };
+		1655C75C23C275AE00886812 /* Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Extensions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1655C75E23C291C600886812 /* libimobiledevice.6.dylib in Frameworks */,
+				1655C75723C17D1F00886812 /* libimobiledevice.6.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +54,7 @@
 			children = (
 				16279B1F23C1535400E27297 /* ilocationsim */,
 				16279B1E23C1535400E27297 /* Products */,
+				1655C74023C155FE00886812 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +70,20 @@
 			isa = PBXGroup;
 			children = (
 				16279B2023C1535400E27297 /* main.m */,
+				1655C74A23C15F9C00886812 /* LocationSimulator.h */,
+				1655C74B23C15FAD00886812 /* LocationSimulator.m */,
+				1655C75B23C275A200886812 /* Extensions.h */,
+				1655C75C23C275AE00886812 /* Extensions.m */,
 			);
 			path = ilocationsim;
+			sourceTree = "<group>";
+		};
+		1655C74023C155FE00886812 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1655C75623C17D1F00886812 /* libimobiledevice.6.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1655C75D23C275AE00886812 /* Extensions.m in Sources */,
 				16279B2123C1535400E27297 /* main.m in Sources */,
+				1655C74C23C15FAD00886812 /* LocationSimulator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +267,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9489Q3YVAN;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/usr/local/Cellar/libplist/2.1.0/lib,
+				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -251,6 +284,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9489Q3YVAN;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/usr/local/Cellar/libplist/2.1.0/lib,
+				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
